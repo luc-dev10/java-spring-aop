@@ -6,12 +6,12 @@ import java.util.List;
 
 public interface AccountDAO {
 
-    public List<Account> getAccounts();
+    List<Account> getAccounts();
 
-    public void saveAccount(Account account);
+    void saveAccount(Account account) throws Exception;
 
-    public Account getAccount(int id);
+    Account getAccount(int id);
 
-    public void deleteAccount(Account account);
+    void deleteAccount(Account account);
 
 }

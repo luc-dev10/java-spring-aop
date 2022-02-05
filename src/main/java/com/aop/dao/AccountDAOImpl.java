@@ -17,9 +17,13 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public void saveAccount(Account account) {
-        if (!this.accountList.contains(account))
-            this.accountList.add(account);
+    public void saveAccount(Account account) throws Exception {
+
+        // if exists, reminder
+        if (this.accountList.contains(account))
+            throw new Exception("This is bad business. User exists already.");
+
+        this.accountList.add(account);
     }
 
     @Override

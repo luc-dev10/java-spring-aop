@@ -20,7 +20,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public void saveAccount(Account account) {
+    public void saveAccount(Account account) throws Exception {
         accountDAO.saveAccount(account);
     }
 

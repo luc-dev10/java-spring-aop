@@ -8,7 +8,7 @@ public interface AccountService {
 
     List<Account> getAccounts();
 
-    void saveAccount(Account account);
+    void saveAccount(Account account) throws Exception;
 
     Account getAccount(int id);
 

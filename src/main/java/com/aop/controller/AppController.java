@@ -41,7 +41,7 @@ public class AppController {
         // save account
         try {
             accountService.saveAccount(account2);
-            accountService.saveAccount(account2);
+            //            accountService.saveAccount(account2);
         } catch (Exception e) {
             e.printStackTrace();
         }

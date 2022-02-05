@@ -20,7 +20,14 @@ public class AllAroundAOP {
         // start
         double begin = System.currentTimeMillis();
 
-        Object result = proceedingJoinPoint.proceed();
+        Object result = null;
+
+        try {
+            result = proceedingJoinPoint.proceed();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
 
         // calculate execution time
         double end = System.currentTimeMillis();
